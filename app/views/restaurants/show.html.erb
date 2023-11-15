@@ -1,0 +1,27 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+
+<h2>Reviews 💀</h2>
+<ul>
+  <% @reviews.each do |review| %>
+    <li>
+      <p><%= review.content %></p>
+      <p>Rating: <%= "⭐️" * review.rating %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%
+=begin%>
+ <%= link_to 'Add Review', new_restaurant_review_path(@restaurant) %>
+<%
+=end%>
+
+<h1>➕ Add Review</h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, as: :integer, in: 0..5 %>
+  <%= f.button :submit %>
+<% end %>

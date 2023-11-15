@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Restaurant.create(name: "Lady Marmalade", address: "Moulin Rogue, Paris", category: "french")
+Restaurant.create(name: "Tessa Testicles", address: "Pasing, Munich", category: "german")
+Restaurant.create(name: "Good Old Corruption", address: "Budapest, Parlament", category: "hungarian")
+Restaurant.create(name: "Spicy Dreams", address: "Downtown, Shanghai", category: "chinese")
+Restaurant.create(name: "La Finesse", address: "Rich Area, Milano", category: "italian")
